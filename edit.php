@@ -7,6 +7,15 @@
 <link rel="icon" type="image/ico" href="logo.jpg"/>
 <link rel="stylesheet" href="styles.css">
 <style>
+  body 
+{
+ overflow:hidden;
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0 5px 10 5px;
+ height: 1000px;
+   background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url(formbackground.jpg);
+/*background-image:url('formbackground.jpg');*/
+}
 input[type=text], select {
   width: 40%;
   padding: 12px 20px;
@@ -15,12 +24,21 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  top: 10px;
+  left: 10px;
 }
 div {
   border-radius: 30px;
-  background-color: #f2f2f2;
+  background-color: #B22222;
   padding: 20px;
   width: 40%;
+  font-size:30px;
+}
+label
+{
+  color:#1b1e24;
+  font-style: bold;
+  font-size: 30px;
 }
 </style>
 <script>
@@ -31,14 +49,14 @@ function goBack() {
 </head>
 <body>
 <ul>
-<li><a href="index.php">Home</a></li>
+<li><a  href="first.php">Home</a></li>
   <li style="float:right"><form action="logout.php" method="post">
-    <input class="inp" type="submit" name="Logout" value="logout">
+    <input class="navinput" type="submit" name="Logout" value="logout">
 </form></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <a>Mr.Joshua Johnson</a><a>Cse Dept</a><a>jj@anits.edu.in</a><a>9984672345</a>
+     <a>Mr.S.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
 </li>
 </ul>
@@ -46,21 +64,22 @@ function goBack() {
 <center>
 <div>
 <form action="save.php" method="POST">
-<label for="cid"><b>Complaint Id:</b></label>
+  <div align="left">
+<b style="font-size: 30px;float: left;">Complaint Id:</b>
 		       <!--<input type="text" id="cid" name="cid" placeholder="Enter Complaint id" required><br><br>-->
 			   <?php
 			   session_start();
 			   $_SESSION['cid']=$_POST['id'];
 			   $_SESSION['type']=$_POST['type'];
 			   echo $_POST['id'];
-			   ?>
-<label for="status"><b>Status:</b></label>
- 		<input type="radio" id="status" name="status" value="Complaint Registered"> Complaint Registered
-				<input type="radio" id="status" name="status" value="Still Progress"> Still Progress
-				<input type="radio" id="status" name="status" value="Solved"> Solved <br><br><br>
-				<input name="save" class="buttonSave" type="submit" id="save" value="save changes">
+			   ?></div>
+<b style="font-size: 30px;">Status:</b></label>
+ 		    <input type="radio" id="status" name="status" value="Complaint Registered"> Complaint Registered<br>
+				<input type="radio" id="status" name="status" value="Still Progress"> Still Progress<br>
+				<input type="radio" id="status" name="status" value="Solved"> Complaint Solved<br><br>				
+        <input name="save" class="buttonSave" type="submit" id="save" value="save changes">
 				<input name="cancel" class="buttonSave" type="button" onclick="window.location.replace('http://localhost/cms/first.php')" value="Cancel" 
-				id="cancel" >
+				id="cancel" ><br>
 				
 </form>
 </div>

@@ -50,7 +50,7 @@ return false;
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <a>Mr.Joshua Johnson</a><a>Cse Dept</a><a>jj@anits.edu.in</a><a>9984672345</a>
+     <a>Mr.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
 </li>
 </ul>

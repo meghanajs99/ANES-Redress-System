@@ -1,21 +1,20 @@
 <?php
-   session_start();
-   
+SESSION_START();
+   $con = mysqli_connect("localhost","root","root","complaintdatabase");
+if (mysqli_connect_errno())
+ {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+ }
    $userId=$_POST['uid'];
    $password=$_POST['psw1'];
    
-   $userId=stripcslashes($userId);
-   $password=stripcslashes($password);
-   $userId=mysql_real_escape_string($userId);
-   $password=mysql_real_escape_string($password);
-   
-   mysql_connect("localhost","root","root");
-   mysql_select_db("complaintdatabase");
-   
-   $result=mysql_query("select *from Admins where Id='$userId' and Password='$password'")
-           or die ("Failed to query database".mysql_error());
-		   
-	$row=mysql_fetch_array($result);
+   $userId=stripslashes($_REQUEST['uid']);
+   $password=stripslashes($_REQUEST['psw1']);
+   $userId=mysqli_real_escape_string($con,$userId);
+   $password=mysqli_real_escape_string($con,$password);
+   $sql="SELECT * from Admins where Id='$userId' and Password='$password'";
+	$result=mysqli_query($con,$sql);   
+	$row = mysqli_fetch_assoc($result);
 	if($row['Id']==$userId && $row['Password']==$password)
 	{
 	    echo '<script>window.open("first.php","_self")</script>';
@@ -24,4 +23,5 @@
 	{
 	   echo '<script>window.open("display.php","_self")</script>';
 	}
-?>
+
+      ?>

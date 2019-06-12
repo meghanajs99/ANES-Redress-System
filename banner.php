@@ -9,14 +9,14 @@
 </head>
 <body>
 <ul>
-  <li><a href="index.php">Home</a></li>
+  <li><a href="first.php">Home</a></li>
   <li style="float:right"><form action="logout.php" method="post">
     <input class="input" type="submit" name="Logout" value="logout">
 </form></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <a>Mr.Joshua Johnson</a><a>Cse Dept</a><a>jj@anits.edu.in</a><a>9984672345</a>
+     <a>Mr.S.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
 </li>
 </ul>
@@ -33,9 +33,6 @@ if (mysqli_connect_errno())
 	$query = "INSERT INTO banner VALUES ('$cid','$uid','$desc');";
     $mysqli_result = mysqli_query($con,$query);
 	?>
-	<h1>THANK YOU!</h1>
-	<input name="Done" class="buttonSave" type="button" onclick="window.location.replace('http://localhost/cms/complaintstatus.php')" value="Done" 
-				id="Done" >
-
+	echo '<script>window.open("first.php","_self")</script>';
   </body>
 </html>

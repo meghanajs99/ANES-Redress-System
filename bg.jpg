@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_2"
+   data-name="Layer 2"
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   sodipodi:docname="blue.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata3777">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>OperaReborn_Wallpaper_Final_Vector</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview3775"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="687.23106"
+     inkscape:cy="673.2225"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_2" />
+  <defs
+     id="defs3758">
+    <style
+       id="style3680">.cls-1{fill:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}.cls-3{fill:url(#linear-gradient-3);}.cls-4{fill:url(#linear-gradient-4);}.cls-5{fill:url(#linear-gradient-5);}.cls-6{fill:url(#linear-gradient-6);}</style>
+    <linearGradient
+       id="linear-gradient"
+       x1="1920"
+       y1="540"
+       x2="0"
+       y2="540"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0036458,0,0,1.0018519,-7,0)">
+      <stop
+         offset="0.27"
+         stop-color="#6dffec"
+         id="stop3682" />
+      <stop
+         offset="0.36"
+         stop-color="#6bf0ec"
+         id="stop3684" />
+      <stop
+         offset="0.53"
+         stop-color="#66c8ec"
+         id="stop3686" />
+      <stop
+         offset="0.76"
+         stop-color="#5f87ed"
+         id="stop3688" />
+      <stop
+         offset="1"
+         stop-color="#563ded"
+         id="stop3690" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-2"
+       x1="1920"
+       y1="540"
+       x2="0"
+       y2="540"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.25"
+         stop-color="#5df3f5"
+         id="stop3693" />
+      <stop
+         offset="0.32"
+         stop-color="#5de8f4"
+         id="stop3695" />
+      <stop
+         offset="0.45"
+         stop-color="#5bc9f0"
+         id="stop3697" />
+      <stop
+         offset="0.61"
+         stop-color="#5998ea"
+         id="stop3699" />
+      <stop
+         offset="0.81"
+         stop-color="#5655e2"
+         id="stop3701" />
+      <stop
+         offset="0.9"
+         stop-color="#5535de"
+         id="stop3703" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-3"
+       x1="90.98"
+       y1="-195.1"
+       x2="1957.62"
+       y2="675.33"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.16"
+         stop-color="#4a31d2"
+         id="stop3706" />
+      <stop
+         offset="0.26"
+         stop-color="#4b38d3"
+         id="stop3708" />
+      <stop
+         offset="0.41"
+         stop-color="#4d4bd7"
+         id="stop3710" />
+      <stop
+         offset="0.58"
+         stop-color="#516add"
+         id="stop3712" />
+      <stop
+         offset="0.78"
+         stop-color="#5695e5"
+         id="stop3714" />
+      <stop
+         offset="0.98"
+         stop-color="#5ccbf0"
+         id="stop3716" />
+      <stop
+         offset="0.99"
+         stop-color="#5ccdf0"
+         id="stop3718" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-4"
+       x1="468.77"
+       y1="41.91"
+       x2="2001.31"
+       y2="452.56"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5320c5"
+         id="stop3721" />
+      <stop
+         offset="0.12"
+         stop-color="#5327c7"
+         id="stop3723" />
+      <stop
+         offset="0.3"
+         stop-color="#543acc"
+         id="stop3725" />
+      <stop
+         offset="0.51"
+         stop-color="#5659d5"
+         id="stop3727" />
+      <stop
+         offset="0.74"
+         stop-color="#5984e1"
+         id="stop3729" />
+      <stop
+         offset="0.99"
+         stop-color="#5cbaf0"
+         id="stop3731" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-5"
+       x1="1920"
+       y1="971.75"
+       x2="1200.06"
+       y2="971.75"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.21"
+         stop-color="#eae331"
+         id="stop3734" />
+      <stop
+         offset="0.34"
+         stop-color="#e7e538"
+         id="stop3736" />
+      <stop
+         offset="0.51"
+         stop-color="#dfe94b"
+         id="stop3738" />
+      <stop
+         offset="0.73"
+         stop-color="#d2f06a"
+         id="stop3740" />
+      <stop
+         offset="0.96"
+         stop-color="#bffa94"
+         id="stop3742" />
+      <stop
+         offset="1"
+         stop-color="#bcfc9c"
+         id="stop3744" />
+    </linearGradient>
+    <linearGradient
+       id="linear-gradient-6"
+       x1="717.75"
+       y1="216"
+       x2="1920"
+       y2="216"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#530dbd"
+         id="stop3747" />
+      <stop
+         offset="0.18"
+         stop-color="#5418c1"
+         id="stop3749" />
+      <stop
+         offset="0.49"
+         stop-color="#5537ca"
+         id="stop3751" />
+      <stop
+         offset="0.9"
+         stop-color="#5767d9"
+         id="stop3753" />
+      <stop
+         offset="1"
+         stop-color="#5874dd"
+         id="stop3755" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title3760">OperaReborn_Wallpaper_Final_Vector</title>
+  <rect
+     class="cls-1"
+     width="1927"
+     height="1082"
+     id="rect3762"
+     style="fill:url(#linear-gradient);stroke-width:1.00274849"
+     x="-7"
+     y="0" />
+  <polygon
+     class="cls-2"
+     points="960.07,972 1440.11,756 1920,1080 1920,0 0,0 0,648 "
+     id="polygon3764"
+     style="fill:url(#linear-gradient-2)"
+     transform="matrix(1.0036458,0,0,1,-7,0)" />
+  <polygon
+     class="cls-3"
+     points="0 0 720 756 1440 540 1920 756 1920 0 0 0"
+     id="polygon3766" />
+  <polygon
+     class="cls-4"
+     points="480 0 720 540 1680 432 1920 756 1920 0 480 0"
+     id="polygon3768" />
+  <polygon
+     class="cls-5"
+     points="1440.06,863.5 1920,972 1920,1080 1200.06,1080 "
+     id="polygon3770"
+     style="fill:url(#linear-gradient-5)"
+     transform="matrix(1,0,0,1.0092379,0,-7.9769053)" />
+  <polygon
+     class="cls-6"
+     points="717.75 0 1439.55 324.25 1679.77 215.75 1920 432 1920 0 717.75 0"
+     id="polygon3772" />
+</svg>

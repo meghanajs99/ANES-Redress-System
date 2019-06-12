@@ -6,18 +6,22 @@
 <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
 <title>ViewComplaints</title>
 <link rel="icon" type="image/ico" href="logo.jpg"/>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styletable.css">
 </head>
 <body>
 <ul>
-   <li><a href="index.php">Home</a></li>
+   <li><a href="first.php">Home</a></li>
+
   <li style="float:right"><form action="logout.php" method="post">
-    <input class="input" type="submit" name="Logout" value="logout">
+    <input class="navinput" type="submit" name="Logout" value="logout">
+</form></li>
+<li style="float:right"><form action="viewfeedback.php" method="post">
+    <input  class="navinput" type="submit" name="view" value="Feedbacks">
 </form></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <a>Mr.Joshua Johnson</a><a>Cse Dept</a><a>jj@anits.edu.in</a><a>9984672345</a>
+     <a>Mr.S.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
 </li>
 </ul>
@@ -31,21 +35,29 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
  }
 
-  if(!isset($_POST['type']))
+ /* if(!isset($_POST['type']))
   {
 	   $type=$_SESSION['type'];
   }
   else
-  {
+  {*/
 	    $type=$_POST['type'];
-  }
+  /*}*/
    $sql="SELECT * from complaints where type='$type'";
-    echo "<center><table><tr><th>ID</th><th>Userid</th><th>Department</th><th>Room No.</th><th>Type</th><th>Description</th><th>Status</th><th>      </th></tr>" ;
+
+    if($type=="miscellaneous")
+    {
+       echo "<center><table><tr><th>ID</th><th>Userid</th><th>Department</th><th>Room No.</th><th>Type</th><th>Description</th><th>Status</th><th></th><th></th><th></th></tr>" ;
+      }
+      else
+      {
+        echo "<center><table><tr><th>ID</th><th>Userid</th><th>Department</th><th>Room No.</th><th>Type</th><th>Description</th><th>Status</th><th></th></tr>" ;
+      }
 	if ($result=mysqli_query($con,$sql))
   {
     while($row = mysqli_fetch_assoc($result)) {  
         echo "<td> " . $row["id"]. "</td>";
-	//	echo "<td> " . $row["userid"]. "</td>";
+	echo "<td> " . $row["userid"]. "</td>";
 		echo "<td> " . $row["department"]. "</td>";
 		echo "<td> " . $row["roomno"]. "</td>";
 		echo "<td> " . $row["type"]. "</td>";
@@ -63,8 +75,13 @@ if (mysqli_connect_errno())
 	<input type='hidden' name='cid' value='".$row["id"]."'>
 	<input type='hidden' name='uid' value='".$row["userid"]."'>
 	<input type='hidden' name='desc' value='".$row["description"]."'>
-   <input type='submit' class='buttonU' name='addtobanner' value='Add to banner?'/></form></td></tr>";
-		}
+   <input type='submit' class='buttonU' name='addtobanner' value='Add to banner?'/></form></td>";
+   echo "<td><form id=Delbanner' action='delbanner.php' method='POST'>
+  <input type='hidden' name='cid' value='".$row["id"]."'>
+  <input type='hidden' name='uid' value='".$row["userid"]."'>
+  <input type='hidden' name='desc' value='".$row["description"]."'>
+   <input type='submit' class='buttonU' name='deletebanner' value='Delete from banner?'/></form></td>";
+  		}
 		echo "<tr>"; 
     }
   }

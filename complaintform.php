@@ -1,25 +1,32 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta HTTP-EQUIV="Pragma" content="no-cache">
+<meta HTTP-EQUIV="Expires" content="-1" >
 <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
 <title>Complaint Management System</title>
 <link rel="stylesheet" href="styles.css">
 
 <link rel="icon" type="image/ico" href="logo.jpg" />
 <style>
+
 body 
 {
- //overflow:hidden;
+
  font-family: Arial, Helvetica, sans-serif;
  margin: 0 5px 10 5px;
  height: 1000px;
+   background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url(formbackground.jpg);
 }
 .container {
 	
 	width: 50%;
   border-radius: 50px;
-  background-color: #82cadf;
+  background-color: #B22222;
   padding: 30px;
 }
 input[type=text], select 
@@ -32,7 +39,7 @@ input[type=text], select
 
 }
 input[type=text] ,textarea{
-	border: 2px solid ;
+	border: 2px solid #ccc ;
   border-radius: 4px;
 }
 label {
@@ -142,9 +149,9 @@ textarea{
 .button1
 {
 
-  background-color: white;
+  background-color:#82cadf;
   
-  color: #82cadf ;
+  color: white ;
   padding: 15px 15px;
   text-align: center;
   font-size: 30px;
@@ -167,7 +174,7 @@ alert("Please enter the room no");
 return false;
 }
 
-if(f2.message.value=="Describe your complaint here"){
+else if(f2.message.value=="Describe your complaint here"){
 alert("Please describe the complaint");
 return false;
 }
@@ -177,21 +184,21 @@ return false;
 </head>
 <body>
 <ul>
-  <li><a href="index.php">Home</a></li>
+  <li><a href="complaintstatus.php">Home</a></li>
   <li style="float:right"><form action="logout.php" method="post">
-    <input class="input" type="submit" name="Logout" value="logout">
+    <input class="navinput" type="submit" name="Logout" value="logout">
 </form></li>
 <li style="float:right"><form action="viewMy.php" method="post">
-    <input class="input" type="submit" name="view" value="My Complaints">
+    <input class="navinput" type="submit" name="view" value="My Complaints">
 </form></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <a>Mr.Joshua Johnson</a><a>Cse Dept</a><a>jj@anits.edu.in</a><a>9984672345</a>
+     <a>Mr.S.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
 </li>
 </ul>
-<h1 align="center" style="color:#82cadf;">Complaint Form</h1>
+<h1 align="center" style="color:white;">Complaint Form</h1>
 <br>
 <center>
 <div class="container" align="center">
@@ -201,8 +208,8 @@ return false;
 <label> Department:</label>
 </div>
 <div class="col-75">
-   <select name="dept" id="dept" style="width:150px;height:35px">
-    <option value="choose">Choose-</option>
+   <select name="dept" id="dept" style="width:150px;height:35px" required>
+    <option value="">Choose-</option>
     <option value="cse">CSE</option>
     <option value="ece">ECE</option>
     <option value="eee">EEE</option>
@@ -231,7 +238,7 @@ return false;
 
 
 <label class="contain">Carpentary
-  <input type="radio" id="complaint" name="complaint" value="carpentry"> 
+  <input type="radio" id="complaint" name="complaint" value="carpentery"> 
    <span class="checkmark"></span>
 </label>
 <label class="contain">Plumbing
@@ -247,7 +254,7 @@ return false;
 <span class="checkmark"></span>  
   </label>
 <label class="contain">Miscellaneous
-<input type="radio" id="complaint" name="complaint" value="miscellaneous">
+<input type="radio" id="complaint" name="complaint" value="miscellaneous" required>
 <span class="checkmark"></span>
 </label>
 
@@ -265,7 +272,7 @@ return false;
 </div> 
 </div>
 <br><br>
-  <input  class="button1" type="submit" value="Submit">
+  <input  class="button1" type="submit" value="Submit" name="mj-submit">
 
 <p>Click submit to register your complaint</p>
 

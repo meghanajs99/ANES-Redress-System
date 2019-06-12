@@ -1,0 +1,35 @@
+</style>
+<script language="javascript">
+function validate()
+{
+var num1=/^anil[0-9]*$/;
+var un=/^[a-zA-Z0-9]*$/;
+if(f2.uid.value==""){
+alert("User ID Field Must Not Be Empty");
+return false;
+}
+if(!(f2.uid.value.match(num1))){
+alert("Invalid User ID");
+return false;
+}
+if(f2.psw.value==""){
+alert("Password Field Must Not Be Empty");
+return false;
+}
+if(!(f2.psw.value.match(un)))
+{
+alert("Password Must Be Alphabets and Numbers");
+//}
+}
+</script>
+<div class="row">
+   <div class="column">
+     <button class="button1" onclick="parent.location='admin_login.php'" style="width:250px;">Admin Login</button>
+   </div>
+   <div class="column">
+     <button class="button1" onclick="parent.location='student_login.php'" style="width:250px;">Student Login</button>
+   </div>
+   <div class="column">
+     <button class="button1" onclick="parent.location='faculty_login.php'" style="width:250px;">Faculty Login</button>
+   </div>
+</div>

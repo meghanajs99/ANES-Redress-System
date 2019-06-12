@@ -8,18 +8,22 @@
 <link rel="stylesheet" href="styles.css">
 <style >
 .sivaji {
-  margin: 10px;
-  width:40%;
+  
+  width:60%;
   border-radius: 30px;
   margin-left:35%;
-  max-width: 300px;
-  padding: 40px;
-  background-color: #82cadf;
+  max-width: 500px;
+  padding: 70px;
+   float:"center";
+  background-color: #B22222;
   
+}
+body{
+   background: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url(formbackground.jpg);
 }
 input[type=text] {
   width: 60%;
-  background: white;
+  background-image: white;
     padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -45,24 +49,27 @@ return false;
 </head>
 <body>
 <ul>
-   <li><a href="index.php">Home</a></li>
+  <li><a href="complaintstatus.php">Home</a></li>
   <li style="float:right"><form action="logout.php" method="post">
-    <input class="input" type="submit" name="Logout" value="logout">
+    <input class="navinput" type="submit" name="Logout" value="logout">
+</form></li>
+<li style="float:right"><form action="viewMy.php" method="post">
+    <input class="navinput" type="submit" name="view" value="My Complaints">
 </form></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <a>Mr.Joshua Johnson</a><a>Cse Dept</a><a>jj@anits.edu.in</a><a>9984672345</a>
+     <a>Mr.s.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
 </li>
-</ul>
-<h1 align="center">Login To See Your Complaint</h1><br>
-<div class="sivaji">
+</ul><br><br><br>
+<div class="sivaji" >
   <form name="f2" action="complaint.php"  method="POST"> 
   <center>
-	<label for="login id" style="font-size:20px"><b>Complaint Id:</b></label>
-	<input type="text" id="cid" name="cid" placeholder="Enter ID" required><br>
-	<input  class="buttonW" type="submit" name="subData" id="b1" value="Submit" onclick="validate()">
+    <div align="left">
+	<b style="font-size:30px;">Complaint Id:</b>
+	<input type="text" id="cid" name="cid" placeholder="Enter ID" required><br><br><br>
+	<center><input  class="buttonW" type="submit" name="subData" id="b1" value="Submit" onclick="validate()"></center>
 	</center>
 </form>
 </div>

@@ -8,12 +8,22 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 
+.buttonU
+{
+  background-color: #fefefe;
+  color: #3e94ce;
+  text-align:center;
+  font-size:30px;
+  border:solid #3e94ce;
+  border-radius: 30px;
+  padding: 20px ;
+}
 img{
 	width:500px;
 	height:300px;
 }
 p{
-color:#82cadf;
+color:#3e94ce;
 text-align:center;
 font-size:50px;
 }
@@ -22,23 +32,22 @@ font-size:50px;
 </head>
 <body>
 <ul>
-  <li><a href="index.php">Home</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Login</a>
-    <div class="dropdown-content">
-      <a href="admin_login.php">Admin</a>
-      <a href="student_login.php">Student</a>
-      <a class="active" href="faculty_login.php">Faculty</a>
-    </div>
-  </li>
+  <li><a href="complaintstatus.php">Home</a></li>
+  <li style="float:right"><form action="logout.php" method="post">
+    <input class="navinput" type="submit" name="Logout" value="logout">
+</form></li>
+<li style="float:right"><form action="viewMy.php" method="post">
+    <input class="navinput" type="submit" name="view" value="My Complaints">
+</form></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <p>Prof.XYZ</p><p>Cse Dept</p><p>xyz@anits.edu.in</p><p>9999999999</p>
+     <a>Mr.S.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
-  </li>
+</li>
 </ul>
 <?php
+session_start();
 $con = mysqli_connect("localhost","root","root","complaintdatabase");
 if (mysqli_connect_errno())
  {
@@ -47,8 +56,8 @@ if (mysqli_connect_errno())
    
    $complaintId=$_POST['cid'];
     
-   $complaintId=stripcslashes($complaintId);
-   $complaintId=mysql_real_escape_string($complaintId);
+   $complaintId=stripslashes($_REQUEST['cid']);
+   $complaintId=mysqli_real_escape_string($con,$complaintId);
    
    $sql="select *from complaints where Id='$complaintId'";
    
@@ -59,11 +68,11 @@ if (mysqli_connect_errno())
 	{
 		echo "<p>".$row['status']."</p>";
 	   //echo "<center><img src='images/111.jpg'></center></br>";
-	   echo "<center><h2>Please provide your valuable feedback</h2></center>";
+	   echo "<center><h2 style='color:red;'>Please provide your valuable feedback</h2></center>";
        echo '<center><form action="feedback.php" method="POST">
   	<input type="hidden" name="id" value="$_SESSION["uid"]">
     <textarea id="message" name="message" rows="5" cols="30" class="form-control" required>Enter Feedback.</textarea>
-    <input type="submit" class="buttonU" name="submit" value="Submit"/></form></center>';   
+   <div align="center"> <input type="submit" class="buttonU" name="submit" value="Submit"/></form></center></div>';   
 	}
 	else
 	{

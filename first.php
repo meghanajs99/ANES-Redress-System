@@ -10,6 +10,10 @@ session_start();
 <link rel="icon" type="image/ico" href="logo.jpg"/>
 <link rel="stylesheet" href="styles.css">
 <style>
+  body
+  {
+    background-color: #1b1e24;;
+  }
 img{
 	width: 350px;
 	height: 350px ;
@@ -18,21 +22,26 @@ button{
 	border:none;
 	
 }
+.container {
+  background-color: #82cadf; 
+}
 </style>
 </head>
 <body>
 <ul>
-<li><a href="index.php">Home</a></li>
-  <li style="float:right"><form action="logout.php" method="post">
-    <input class="inp" type="submit" name="Logout" value="logout">
+<li><a href="first.php">Home</a></li>
+ 
+<li style="float:right"><form action="logout.php" method="post">
+    <input  class="navinput" type="submit" name="Logout" value="logout">
 </form></li>
 <li style="float:right"><form action="viewfeedback.php" method="post">
-    <input class="input" type="submit" name="view" value="Feedbacks">
+    <input  class="navinput" type="submit" name="view" value="Feedbacks">
 </form></li>
+
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
     <div class="dropdown-content">
-     <a>Mr.Joshua Johnson</a><a>Cse Dept</a><a>jj@anits.edu.in</a><a>9984672345</a>
+     <a>Mr.S.Joshua Johnson</a><a>Asst.Professor</a><a>Cse Dept</a><a>joshua.cse@anits.edu.in</a><a>9573382650</a>
     </div>
 </li>
 </ul>

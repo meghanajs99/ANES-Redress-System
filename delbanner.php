@@ -9,12 +9,9 @@
 </head>
 <body>
 <ul>
-  <li><a href="index.php">Home</a></li>
+  <li><a href="first.php">Home</a></li>
   <li style="float:right"><form action="logout.php" method="post">
-    <input class="navinput" type="submit" name="Logout" value="logout">
-</form></li>
-<li style="float:right"><form action="viewMy.php" method="post">
-    <input class="navinput" type="submit" name="view" value="My Complaints">
+    <input class="input" type="submit" name="Logout" value="logout">
 </form></li>
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Contact</a>
@@ -30,15 +27,13 @@ if (mysqli_connect_errno())
  {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
  }
-   $id=$_SESSION['uid'];
-   $desc=$_POST['message'];
-	$query = "INSERT INTO feedbacks VALUES ('$id','$desc');";
+   $cid=$_POST['cid'];
+   $uid=$_POST['uid'];
+   $desc=$_POST['desc'];
+	$query = "Delete from banner where id=$cid;";
     $mysqli_result = mysqli_query($con,$query);
 	?>
-	<br><br><br><h1 align="center">THANK YOU!</h1>
-  <div align="center">
-	<input name="Done" class="buttonSave" type="button" onclick="window.location.replace('http://localhost/cms/complaintstatus.php')" value="Done" 
-				id="Done" ></div>
+  echo '<script>window.open("first.php","_self")</script>';
 
   </body>
 </html>
